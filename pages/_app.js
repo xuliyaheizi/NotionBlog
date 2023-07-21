@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import 'animate.css'
+import '@/styles/animate.css' // @see https://animate.style/
 import '@/styles/globals.css'
 import '@/styles/nprogress.css'
 import '@/styles/utility-patterns.css'
@@ -30,10 +30,15 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
         <GlobalContextProvider>
+<<<<<<< .merge_file_gSZP7c
             <Component {...pageProps}/>
             <Analytics />
             <ExternalPlugins {...pageProps} />
+=======
+>>>>>>> .merge_file_dEZAXM
             <ExternalScript />
+            <Component {...pageProps} />
+            <ExternalPlugins {...pageProps} />
         </GlobalContextProvider>
   )
 }
