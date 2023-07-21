@@ -82,7 +82,7 @@ const BLOG = {
   CUSTOM_EXTERNAL_CSS: [''], // e.g. ['http://xx.com/style.css','http://xx.com/style.css']
 
   // 侧栏布局 是否反转(左变右,右变左) 已支持主题: hexo next medium fukasawa example
-  LAYOUT_SIDEBAR_REVERSE: false,
+  LAYOUT_SIDEBAR_REVERSE: true,
 
   // 一个小插件展示你的facebook fan page~ @see https://tw.andys.pro/article/add-facebook-fanpage-notionnext
   FACEBOOK_PAGE_TITLE: process.env.NEXT_PUBLIC_FACEBOOK_PAGE_TITLE || null, // 邊欄 Facebook Page widget 的標題欄，填''則無標題欄 e.g FACEBOOK 粉絲團'
@@ -157,7 +157,7 @@ const BLOG = {
   // Chatbase
   CHATBASE_ID: process.env.NEXT_PUBLIC_CHATBASE_ID || null, // 是否显示chatbase机器人 https://www.chatbase.co/
   // 悬浮挂件
-  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || true, // 是否显示宠物挂件
+  WIDGET_PET: process.env.NEXT_PUBLIC_WIDGET_PET || false, // 是否显示宠物挂件
   WIDGET_PET_LINK:
       process.env.NEXT_PUBLIC_WIDGET_PET_LINK ||
       'https://cdn.jsdelivr.net/npm/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json', // 挂件模型地址 @see https://github.com/xiazeyu/live2d-widget-models
@@ -208,7 +208,7 @@ const BLOG = {
 
   // utterance
   COMMENT_UTTERRANCES_REPO:
-      process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO || '', // 你的代码仓库名， 例如我是 'tangly1024/NotionNext'； 更多文档参考 https://utteranc.es/
+      process.env.NEXT_PUBLIC_COMMENT_UTTERRANCES_REPO || 'xuliyaheizi/NotionBlog', // 你的代码仓库名， 例如我是 'tangly1024/NotionNext'； 更多文档参考 https://utteranc.es/
 
   // giscus @see https://giscus.app/
   COMMENT_GISCUS_REPO: process.env.NEXT_PUBLIC_COMMENT_GISCUS_REPO || '', // 你的Github仓库名 e.g 'tangly1024/NotionNext'
