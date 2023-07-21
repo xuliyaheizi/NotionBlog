@@ -30,12 +30,9 @@ const MyApp = ({ Component, pageProps }) => {
 
   return (
         <GlobalContextProvider>
-<<<<<<< .merge_file_gSZP7c
             <Component {...pageProps}/>
             <Analytics />
             <ExternalPlugins {...pageProps} />
-=======
->>>>>>> .merge_file_dEZAXM
             <ExternalScript />
             <Component {...pageProps} />
             <ExternalPlugins {...pageProps} />
