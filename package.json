@@ -1,6 +1,6 @@
 {
   "name": "notion-next",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "homepage": "https://github.com/tangly1024/NotionNext.git",
   "license": "MIT",
   "repository": {
@@ -24,8 +24,12 @@
     "@giscus/react": "^2.2.6",
     "@headlessui/react": "^1.7.15",
     "@next/bundle-analyzer": "^12.1.1",
+<<<<<<< HEAD
     "@vercel/analytics": "^1.0.1",
     "animate.css": "^4.1.1",
+=======
+    "@vercel/analytics": "^1.0.0",
+>>>>>>> main
     "animejs": "^3.2.1",
     "aos": "^3.0.0-beta.6",
     "axios": ">=0.21.1",
@@ -35,7 +39,6 @@
     "js-md5": "^0.7.3",
     "localStorage": "^1.0.4",
     "lodash.throttle": "^4.1.1",
-    "mark.js": "^8.11.1",
     "memory-cache": "^0.2.0",
     "mongodb": "^4.6.0",
     "next": "13.3.1",
