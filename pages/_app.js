@@ -5,6 +5,8 @@ import '@/styles/globals.css'
 import '@/styles/nprogress.css'
 import '@/styles/utility-patterns.css'
 
+import { Analytics } from '@vercel/analytics/react';
+
 // core styles shared by all of react-notion-x (required)
 import 'react-notion-x/src/styles.css'
 import '@/styles/notion.css' //  重写部分样式
@@ -29,6 +31,7 @@ const MyApp = ({ Component, pageProps }) => {
   return (
         <GlobalContextProvider>
             <Component {...pageProps}/>
+            <Analytics />
             <ExternalPlugins {...pageProps} />
             <ExternalScript />
         </GlobalContextProvider>
