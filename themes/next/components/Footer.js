@@ -1,16 +1,11 @@
-import React from 'react'
-import BLOG from '@/blog.config'
+import { siteConfig } from '@/lib/config'
 import DarkModeButton from '@/components/DarkModeButton'
 
 const Footer = ({ title }) => {
   const d = new Date()
   const currentYear = d.getFullYear()
-  const copyrightDate = (function () {
-    if (Number.isInteger(BLOG.SINCE) && BLOG.SINCE < currentYear) {
-      return BLOG.SINCE + '-' + currentYear
-    }
-    return currentYear
-  })()
+  const since = siteConfig('SINCE')
+  const copyrightDate = parseInt(since) < currentYear ? since + '-' + currentYear : currentYear
 
   return (
         <footer
@@ -20,9 +15,9 @@ const Footer = ({ title }) => {
             <span>
                 <DarkModeButton />
 
-                <i className='fas fa-copyright' /> {`${copyrightDate}`} <span className='mx-1 animate-pulse'><i className='fas fa-heart' /></span> <a href={BLOG.LINK} className='underline font-bold '>{BLOG.AUTHOR}</a>.<br />
+                <i className='fas fa-copyright' /> {`${copyrightDate}`} <span className='mx-1 animate-pulse'><i className='fas fa-heart' /></span> <a href={siteConfig('LINK')} className='underline font-bold '>{siteConfig('AUTHOR')}</a>.<br />
 
-                {BLOG.BEI_AN && <><i className='fas fa-shield-alt' /> <a href='https://beian.miit.gov.cn/' className='mr-2'>{BLOG.BEI_AN}</a><br /></>}
+                {siteConfig('BEI_AN') && <><i className='fas fa-shield-alt' /> <a href='https://beian.miit.gov.cn/' className='mr-2'>{siteConfig('BEI_AN')}</a><br /></>}
 
                 <span className='hidden busuanzi_container_site_pv'>
                     <i className='fas fa-eye' /><span className='px-1 busuanzi_value_site_pv'> </span> </span>
