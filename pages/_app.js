@@ -14,6 +14,8 @@ import { useRouter } from 'next/router'
 import { useCallback, useMemo } from 'react'
 import { getQueryParam } from '../lib/utils'
 import useAdjustStyle from '@/hooks/useAdjustStyle'
+// vercel网站统计插件
+import { Analytics } from '@vercel/analytics/react'
 
 // 各种扩展插件 这个要阻塞引入
 import ExternalPlugins from '@/components/ExternalPlugins'
@@ -27,7 +29,7 @@ import BLOG from '@/blog.config'
  */
 const MyApp = ({ Component, pageProps }) => {
   // 一些可能出现 bug 的样式，可以统一放入该钩子进行调整
-  useAdjustStyle();
+  useAdjustStyle()
 
   const route = useRouter()
   const queryParam = useMemo(() => {
@@ -47,8 +49,9 @@ const MyApp = ({ Component, pageProps }) => {
   return (
     <GlobalContextProvider {...pageProps}>
       <GLayout {...pageProps}>
-        <GlobalHead {...pageProps}/>
+        <GlobalHead {...pageProps} />
         <Component {...pageProps} />
+        <Analytics />
       </GLayout>
       <ExternalPlugins {...pageProps} />
     </GlobalContextProvider>
