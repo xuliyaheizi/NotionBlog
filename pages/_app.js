@@ -16,7 +16,6 @@ import { getQueryParam } from '../lib/utils'
 import useAdjustStyle from '@/hooks/useAdjustStyle'
 // vercel网站统计插件
 import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 // 各种扩展插件 这个要阻塞引入
 import ExternalPlugins from '@/components/ExternalPlugins'
@@ -55,7 +54,6 @@ const MyApp = ({ Component, pageProps }) => {
       </GLayout>
       <ExternalPlugins {...pageProps} />
       <Analytics />
-      <SpeedInsights />
     </GlobalContextProvider>
   )
 }
