@@ -14,8 +14,6 @@ import { useRouter } from 'next/router'
 import { useCallback, useMemo } from 'react'
 import { getQueryParam } from '../lib/utils'
 import useAdjustStyle from '@/hooks/useAdjustStyle'
-// vercel网站统计插件
-import { Analytics } from '@vercel/analytics/react'
 
 // 各种扩展插件 这个要阻塞引入
 import ExternalPlugins from '@/components/ExternalPlugins'
@@ -53,7 +51,6 @@ const MyApp = ({ Component, pageProps }) => {
         <Component {...pageProps} />
       </GLayout>
       <ExternalPlugins {...pageProps} />
-      <Analytics />
     </GlobalContextProvider>
   )
 }
